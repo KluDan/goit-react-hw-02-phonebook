@@ -3,10 +3,20 @@ import { Component } from 'react';
 import { PhonebookForm } from './PhonebookForm/PhonebookForm';
 import { ContactsList } from './ContactsList/ContactsList';
 import { Filter } from './FilterByName/Filter';
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
+  margin: 20px;
+`;
 
 export class App extends Component {
   state = {
-    contacts: [],
+    contacts: [
+      { id: 'id-1', name: 'Rosie Simpson', number: '459-12-563' },
+      { id: 'id-2', name: 'Hermione Kline', number: '443-89-122' },
+      { id: 'id-3', name: 'Eden Clements', number: '645-17-791' },
+      { id: 'id-4', name: 'Annie Copeland', number: '227-91-260' },
+    ],
     filter: '',
   };
 
@@ -53,7 +63,7 @@ export class App extends Component {
     const { filter } = this.state;
     const filteredContacts = this.getFilteredContacts();
     return (
-      <>
+      <Wrapper>
         <h1>Phonebook</h1>
         <PhonebookForm onAdd={this.addPhoneNumber} />
         <h2>Contacts</h2>
@@ -63,7 +73,7 @@ export class App extends Component {
           onDelete={this.handleDelete}
         />
         <GlobalStyle />
-      </>
+      </Wrapper>
     );
   }
 }

@@ -45,9 +45,6 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
-ol, ul {
-	list-style: none;
-}
 blockquote, q {
 	quotes: none;
 }
@@ -59,5 +56,30 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+h1 {
+	font-size: 30px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+h2{
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+input[type='tel'] {
+	margin: 0px;
+	padding: 5px;
+}
+button:hover{
+	background-color: blue;
+	color:#fff;
+	border-color:blue;
+	cursor: pointer;
+}
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: disc;
 }
 `;
